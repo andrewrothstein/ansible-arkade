@@ -1,0 +1,28 @@
+---
+# vars file for arkade
+arkade_os: '{{ ansible_system | lower }}'
+arkade_arch: '{{ arkade_arch_map[ansible_architecture] }}'
+arkade_platform: '{{ arkade_os }}-{{ arkade_arch }}'
+arkade_suffix: |
+  {%- if arkade_os == "linux" -%}
+    {%- if arkade_arch != "amd64" -%}
+      -{{ arkade_arch }}
+    {%- else -%}
+
+    {%- endif -%}
+  {%- elif arkade_os == "darwin" -%}
+    {%- if arkade_arch == "amd64" -%}
+      -{{ arkade_platform }}
+    {%- else -%}
+      -{{ arkade_os }}
+    {%- endif -%}
+  {%- else -%}
+    .exe
+  {%- endif -%}
+
+
+arkade_exe: arkade{{ arkade_suffix }}
+arkade_url: '{{ arkade_mirror }}/{{ arkade_ver }}/{{ arkade_exe }}'
+arkade_checksum: '{{ arkade_checksums[arkade_ver][arkade_platform] }}'
+arkade_install_exe: '{{ arkade_install_dir }}/arkade-{{ arkade_os }}-{{ arkade_arch }}-{{ arkade_ver}}'
+arkade_link: '{{ arkade_install_dir }}/arkade'
