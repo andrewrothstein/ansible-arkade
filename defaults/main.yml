@@ -1,6 +1,6 @@
 ---
 # defaults file for arkade
-arkade_ver: 0.11.12
+arkade_ver: 0.11.16
 arkade_arch_map:
   arm64: arm64
   aarch64: arm64
@@ -47,3 +47,16 @@ arkade_checksums:
     linux-armhf: sha256:b03a8feb9764f4f23165c45e7c185a7fe5ace73f4f3ebb6c4a969eddfeafed79
     # https://github.com/alexellis/arkade/releases/download/0.11.12/arkade.exe.sha256
     windows-amd64: sha256:d99f6ef53fab079879dc9787cf4a0db0a22e91c9823e5f8c039680ad0e4a8939
+  '0.11.16':
+    # https://github.com/alexellis/arkade/releases/download/0.11.16/arkade-darwin.sha256
+    darwin-amd64: sha256:91939ddffdaebea470fc4a44107c773ccb59cbf3a36a4c7496928f564e01054d
+    # https://github.com/alexellis/arkade/releases/download/0.11.16/arkade-darwin-arm64.sha256
+    darwin-arm64: sha256:b17c5f20327cdc7235ad13f2a254f35b636c657360ae17fc5c2ad45195422655
+    # https://github.com/alexellis/arkade/releases/download/0.11.16/arkade.sha256
+    linux-amd64: sha256:da8e9caa3798a905afcc471cd105d78e455d12b38a1727f0567e949811b6a597
+    # https://github.com/alexellis/arkade/releases/download/0.11.16/arkade-arm64.sha256
+    linux-arm64: sha256:0e8ef81e6cba17a9b56ff0ccc9ae41ee09bcae8fddbd20c508fbb00a5c4fdb8b
+    # https://github.com/alexellis/arkade/releases/download/0.11.16/arkade-armhf.sha256
+    linux-armhf: sha256:92309e135d6a478d474f0947b76306b9fff13e8714160400b55050454e63028f
+    # https://github.com/alexellis/arkade/releases/download/0.11.16/arkade.exe.sha256
+    windows-amd64: sha256:9e92a7dd8accdae6b1f7db1b8e70bd7bd6ed254cb741a5aa2cde5a3d25c11720
